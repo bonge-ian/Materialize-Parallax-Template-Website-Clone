@@ -1,0 +1,76 @@
+.container {
+    width: 90%;
+    max-width: 1024px;
+    margin: auto;
+}
+button,
+.button,
+a.button {
+    background: $link-color;
+    color: $body-bg;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.9rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 3px;
+
+    &:hover {
+        background: lighten($color: $link-color, $amount: 2);
+    }
+}
+
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Margin & Padding
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+    // All around margin
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+
+    // Vertical Margin
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+
+    // All around Padding
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+
+    // Vertical Padding
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+}
+
+.std-height {
+    min-height: 24.75rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cols {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1.01rem;
+    }
+}

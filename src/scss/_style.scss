@@ -1,0 +1,247 @@
+* {
+    @extend %no-space;
+}
+
+body {
+    font: {
+        family: $font-stack;
+        size: 1rem;
+        weight: $font-weight;
+    }
+    line-height: $line-height;
+    background: $body-bg;
+    color: $black;
+}
+
+// nav
+header {
+    background: $body-bg;
+    height: 4rem;
+    border-bottom: 1px solid lighten($color: $grey, $amount: 20%);
+    margin: 0;
+    width: 100%;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        line-height: 4rem;
+
+        ul.menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                color: $black;
+                padding: 0 0.5rem;
+            }
+        }
+        .left-nav {
+            .logo {
+                font: {
+                    size: 2.1rem;
+                    weight: 500;
+                }
+            }
+        }
+
+        .right-nav {
+            .menu {
+                li {
+                    transition: background 300ms ease-in-out;
+                    &:hover {
+                        background: $nav-bg-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// hero section
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: {
+        image: url('/dist/images/bg.jpg');
+        attachment: scroll;
+        position: right 29%;
+        size: cover;
+    }
+
+    padding: 0.4rem 1.2rem;
+
+    h1 {
+        color: $teal-text-color;
+        font-size: 4.2rem;
+        font-weight: 400;
+        margin: 2.2rem 0 1.6rem 0;
+    }
+    h5 {
+        color: $body-bg;
+        font: {
+            size: 1.64rem;
+            weight: 300;
+        }
+    }
+
+    .align-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 6rem;
+    }
+}
+
+#desc {
+    .row {
+        justify-content: space-evenly !important;
+        .cols {
+            .icons {
+                color: $brown;
+                font-size: 3.6rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            h5 {
+                font-size: 1.44rem;
+                line-height: 110%;
+                text-align: center;
+                margin: 1.09rem 0 0.656rem 0;
+            }
+            p {
+                font-size: 0.998rem;
+                line-height: 2rem;
+                font-weight: 300;
+                text-align: left;
+            }
+        }
+    }
+}
+
+#hero2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: {
+        image: url('/dist/images/bg2.jpg');
+        attachment: scroll;
+        position: center 60%;
+        size: cover;
+    }
+
+    h2 {
+        font-size: 1.64rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 300;
+    }
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        font: {
+            size: 2.29rem;
+            weight: 400;
+        }
+    }
+
+    p {
+        font-weight: 300;
+        line-height: 2rem;
+        text-align: left;
+    }
+}
+
+#hero3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: {
+        image: url('/dist/images/bg3.jpg');
+        attachment: scroll;
+        position: center 60%;
+        size: cover;
+    }
+    h2 {
+        font-size: 1.64rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 300;
+    }
+}
+
+footer {
+    background: $teal;
+    color: $body-bg;
+
+    .row {
+        padding: 0.8rem 1.3rem;
+        margin-bottom: 1.3rem;
+    }
+    h5 {
+        font: {
+            size: 1.5rem;
+            weight: normal;
+        }
+        margin-bottom: 1rem;
+        vertical-align: middle;
+        align-self: flex-start;
+    }
+    #bio {
+        width: calc(50%);
+    }
+    #settings,
+    #connect {
+        width: calc(25%);
+        ul {
+            align-self: flex-start;
+        }
+    }
+
+    #copy {
+        background: rgba(51, 51, 51, 0.08);
+        color: rgba(255, 255, 255, 0.8);
+        min-height: 2rem;
+        padding: 1.1rem;
+        span {
+            color: $light-brown;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .row {
+        flex-wrap: wrap !important;
+    }
+
+    #hero {
+        background-position: center;
+    }
+    footer {
+        .row {
+            padding: 0.4rem;
+        }
+        #bio,
+        #settings,
+        #connect {
+            width: calc(100%) !important;
+        }
+
+        #copy {
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
