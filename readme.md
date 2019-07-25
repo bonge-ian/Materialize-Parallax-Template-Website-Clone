@@ -3,4 +3,4 @@ This is a clone of the [parallax template](https://materializecss.com/templates/
 
 ##### Technology used:
 - HTML
-- SCSS
+- Sass (SCSS)
